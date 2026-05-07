@@ -17,8 +17,12 @@ export default function SessionsPage() {
 
   const createSession = async () => {
     setCreating(true);
-    const session = await api.sessions.create();
-    router.push(`/sessions/${session.id}`);
+    try {
+      const session = await api.sessions.create();
+      router.push(`/sessions/${session.id}`);
+    } catch {
+      setCreating(false);
+    }
   };
 
   const phaseColors: Record<string, string> = {

@@ -14,6 +14,7 @@ import { Loader2 } from 'lucide-react';
 export default function SessionPage() {
   const { id } = useParams<{ id: string }>();
   const [session, setSession] = useState<Session | null>(null);
+  const [sessionError, setSessionError] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [streamingContent, setStreamingContent] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
@@ -23,13 +24,17 @@ export default function SessionPage() {
   const [selectedArtifact, setSelectedArtifact] = useState<Artifact | null>(null);
   const [error, setError] = useState<string | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const isStreamingRef = useRef(false);
 
   useEffect(() => {
-    api.sessions.get(id).then((s) => {
-      setSession(s);
-      setMessages(s.messages);
-      setPhase(s.phase);
-    });
+    api.sessions
+      .get(id)
+      .then((s) => {
+        setSession(s);
+        setMessages(s.messages);
+        setPhase(s.phase);
+      })
+      .catch(() => setSessionError('Não foi possível carregar a sessão.'));
     api.sessions.artifacts(id).then(setArtifacts);
   }, [id]);
 
@@ -38,7 +43,8 @@ export default function SessionPage() {
   }, [messages, streamingContent]);
 
   const sendMessage = useCallback(async (message: string) => {
-    if (isStreaming) return;
+    if (isStreamingRef.current) return;
+    isStreamingRef.current = true;
     setError(null);
     setIsStreaming(true);
     setStreamingContent('');
@@ -63,7 +69,6 @@ export default function SessionPage() {
         } else if (event.type === 'artifact_ready') {
           setArtifacts((prev) => [...prev, event.artifact]);
         } else if (event.type === 'done') {
-          // Commit streaming content as assistant message
           const assistantMsg: Message = {
             role: 'assistant',
             content: accumulated,
@@ -82,14 +87,20 @@ export default function SessionPage() {
       setError(e instanceof Error ? e.message : 'Erro inesperado.');
       setStreamingContent('');
     } finally {
+      isStreamingRef.current = false;
       setIsStreaming(false);
+      setStreamingContent('');
     }
-  }, [id, isStreaming]);
+  }, [id]);
 
   if (!session) {
     return (
       <div className="flex items-center justify-center h-full">
-        <Loader2 className="animate-spin text-gray-500" size={24} />
+        {sessionError ? (
+          <p className="text-sm text-red-400">{sessionError}</p>
+        ) : (
+          <Loader2 className="animate-spin text-gray-500" size={24} />
+        )}
       </div>
     );
   }
