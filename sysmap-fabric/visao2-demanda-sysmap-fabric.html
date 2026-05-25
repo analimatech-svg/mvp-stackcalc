@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visão 2 — Demanda · SysMap Fabric</title>
+<style>
+@page{size:A4;margin:1.2cm}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Trebuchet MS',Arial,sans-serif;background:#0F172A;color:#F8FAFC;padding:20px}
+h1{font-size:21px;font-weight:700;margin-bottom:3px}
+.sub{font-size:11px;color:#94A3B8;margin-bottom:4px}
+.aud{display:inline-block;font-size:10px;color:#93C5FD;background:#0C1D3A;border:1px solid #1E3A5F;border-radius:20px;padding:3px 10px;margin-bottom:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.kpi{background:#1E293B;border-radius:10px;padding:13px 15px;border:1px solid #334155}
+.kpi-n{font-size:20px;font-weight:700;line-height:1.1}
+.kpi-l{font-size:10px;color:#64748B;margin-top:5px}
+.kpi.green .kpi-n{color:#34D399}.kpi.blue .kpi-n{color:#60A5FA}.kpi.amber .kpi-n{color:#FBBF24}
+.section-title{font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:.8px;margin:18px 0 8px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px}
+.step{background:#1E293B;border:1px solid #334155;border-radius:10px;padding:11px}
+.step-n{width:22px;height:22px;border-radius:50%;background:#0C1D3A;border:1px solid #1E3A5F;color:#60A5FA;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:7px}
+.step-t{font-size:11px;font-weight:600;color:#F8FAFC;margin-bottom:3px}
+.step-d{font-size:9.5px;color:#94A3B8;line-height:1.35}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#1E293B;border:1px solid #334155;border-radius:10px;padding:13px 15px;margin-bottom:10px}
+.card h3{font-size:12px;color:#F8FAFC;margin-bottom:8px}
+.row{display:flex;gap:8px;padding:5px 0;border-bottom:1px solid #0F172A;font-size:11px;line-height:1.4}
+.row:last-child{border-bottom:none}
+.row .k{color:#93C5FD;font-weight:600;min-width:96px;flex-shrink:0}
+.row .v{color:#94A3B8}
+table{width:100%;border-collapse:collapse;font-size:10.5px}
+th{background:#0C1D3A;color:#93C5FD;text-align:left;padding:6px 9px;font-weight:600;border:1px solid #1E3A5F}
+td{border:1px solid #334155;padding:6px 9px;color:#CBD5E1;vertical-align:top}
+.pill{display:inline-block;font-size:9px;font-weight:600;padding:1px 7px;border-radius:20px}
+.p-fila{background:#0C1D3A;color:#93C5FD}.p-exec{background:#1A1000;color:#FBBF24}.p-ok{background:#064E3B;color:#6EE7B7}
+.gloss{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.gi{font-size:10.5px;color:#94A3B8;padding:3px 0;border-bottom:1px solid #1E293B;line-height:1.4}
+.gi b{color:#F8FAFC}
+.note{background:#0C1D3A;border:1px solid #1E3A5F;border-radius:8px;padding:9px 12px;font-size:10px;color:#93C5FD;margin-top:8px}
+.note::before{content:"ℹ ";font-weight:700}
+.warn{background:#422006;border:1px solid #92400E;border-radius:8px;padding:9px 12px;font-size:10px;color:#FCD34D;margin-top:8px}
+.warn::before{content:"⚠ ";font-weight:700}
+.footer{text-align:center;font-size:9px;color:#334155;margin-top:20px;padding-top:12px;border-top:1px solid #1E293B}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+</style></head><body>
+
+<h1>SysMap Fabric — Visão 2: Demanda</h1>
+<div class="sub">Como pedir, acompanhar e se comunicar com a fábrica · Maio 2026 · Confidencial — SysMap Solutions</div>
+<div class="aud">Público: GRT e Gerentes Sênior — quem traz e acompanha a demanda da fábrica</div>
+
+<div class="kpis">
+  <div class="kpi green"><div class="kpi-n"><span class="dot" style="background:#34D399"></span>Aberta</div><div class="kpi-l">Capacidade para nova demanda (ilustrativo)</div></div>
+  <div class="kpi blue"><div class="kpi-n">2–3 dias</div><div class="kpi-l">SLA de resposta: 2 análise · 3 estimativa</div></div>
+  <div class="kpi blue"><div class="kpi-n">Sexta</div><div class="kpi-l">Weekly report de cada projeto</div></div>
+  <div class="kpi amber"><div class="kpi-n">DM</div><div class="kpi-l">Sua porta de entrada: o Demand Manager</div></div>
+</div>
+
+<div class="section-title">Da solicitação à entrega — em 5 passos</div>
+<div class="flow">
+  <div class="step"><div class="step-n">1</div><div class="step-t">Você pede</div><div class="step-d">Envia a demanda pelo canal único ao Demand Manager (DM), com o contexto mínimo.</div></div>
+  <div class="step"><div class="step-n">2</div><div class="step-t">DM tria</div><div class="step-d">DM analisa, classifica (bug vs evolutivo vs projeto) e estima. Prioriza com você (MoSCoW).</div></div>
+  <div class="step"><div class="step-n">3</div><div class="step-t">Entra na fila</div><div class="step-d">Vira card no Jira, dentro do projeto certo. Você recebe o ID e a previsão.</div></div>
+  <div class="step"><div class="step-n">4</div><div class="step-t">Fábrica executa</div><div class="step-d">Sprint de 2 semanas. Passa pelos quality gates. Você acompanha pelo weekly e pelo Power BI.</div></div>
+  <div class="step"><div class="step-n">5</div><div class="step-t">Entrega + aceite</div><div class="step-d">Sprint review, UAT e aceite. Artefatos no SharePoint do projeto.</div></div>
+</div>
+
+<div class="section-title">A comunicação — o que você recebe e quando</div>
+<table>
+  <tr><th>Quando</th><th>O que você recebe</th><th>Canal</th></tr>
+  <tr><td>Toda sexta</td><td>Weekly report: saúde (verde/âmbar/vermelho), entregas da semana, próximos passos, bugs críticos</td><td>E-mail + link / SharePoint</td></tr>
+  <tr><td>A cada 2 semanas</td><td>Sprint review: demo do que foi entregue + planejamento do próximo ciclo</td><td>Reunião + ata</td></tr>
+  <tr><td>Em até 2h</td><td>Aviso de bug crítico (se houver): impacto, prazo e ação</td><td>E-mail urgente + telefone</td></tr>
+  <tr><td>Mensal</td><td>Visão executiva: progresso vs baseline, horas consumidas, riscos e marcos</td><td>Power BI / reunião</td></tr>
+  <tr><td>Tempo real</td><td>Status de todas as suas demandas (sem precisar acessar o Jira)</td><td>Power BI (link)</td></tr>
+</table>
+
+<div class="cols">
+  <div class="card">
+    <h3>Como pedir certo (o que incluir)</h3>
+    <div class="row"><span class="k">Quem é o cliente</span><span class="v">Conta / programa / sponsor</span></div>
+    <div class="row"><span class="k">O que precisa</span><span class="v">Resultado esperado, não a solução técnica</span></div>
+    <div class="row"><span class="k">Por que / urgência</span><span class="v">Impacto no negócio e data desejada</span></div>
+    <div class="row"><span class="k">Tipo</span><span class="v">Bug · evolutivo · projeto novo</span></div>
+    <div class="row"><span class="k">Anexos</span><span class="v">Print, e-mail do cliente, contrato (se houver)</span></div>
+    <div class="note">Quanto melhor o contexto, mais rápida e precisa a estimativa.</div>
+  </div>
+  <div class="card">
+    <h3>Regras que evitam atrito</h3>
+    <div class="row"><span class="k">Escopo</span><span class="v">O que não foi acordado vira Change Request (CR)</span></div>
+    <div class="row"><span class="k">Prioridade</span><span class="v">Definida com você por MoSCoW — não por ordem de chegada</span></div>
+    <div class="row"><span class="k">Bug vs evolutivo</span><span class="v">Bug = o que entregamos quebrou · Evolutivo = algo novo</span></div>
+    <div class="row"><span class="k">Mudou algo?</span><span class="v">Fale com o DM — ele reflete no board e no report</span></div>
+    <div class="row"><span class="k">Canal</span><span class="v">Sempre o DM — não acione o dev direto</span></div>
+  </div>
+</div>
+
+<div class="section-title">Minhas demandas (exemplo de como você acompanha)</div>
+<table>
+  <tr><th>ID</th><th>Demanda</th><th>Tipo</th><th>Status</th><th>Previsão</th></tr>
+  <tr><td>SSG-47709-12</td><td>Filtro de oportunidade por stage</td><td>Evolutivo</td><td><span class="pill p-exec">Em execução</span></td><td>Sprint atual</td></tr>
+  <tr><td>SSG-47709-15</td><td>Erro ao salvar sem stage</td><td>Bug</td><td><span class="pill p-ok">Entregue</span></td><td>—</td></tr>
+  <tr><td>SSG-47800-03</td><td>Novo painel de vendas</td><td>Projeto</td><td><span class="pill p-fila">Na fila</span></td><td>Próx. sprint</td></tr>
+</table>
+<div class="warn">Capacidade e demandas acima são ilustrativas — os números reais virão do Power BI conectado ao Jira.</div>
+
+<div class="section-title">Glossário "no bit" — os termos que você vai ouvir</div>
+<div class="gloss">
+  <div class="gi"><b>US (User Story)</b> — uma entrega de valor, escrita do ponto de vista de quem usa.</div>
+  <div class="gi"><b>Sprint</b> — ciclo de 2 semanas em que a fábrica entrega um conjunto de itens.</div>
+  <div class="gi"><b>Quality Gate</b> — checagem obrigatória antes de avançar (qualidade não negociável).</div>
+  <div class="gi"><b>MoSCoW</b> — forma de priorizar: Must / Should / Could / Won't.</div>
+  <div class="gi"><b>CR (Change Request)</b> — pedido fora do escopo acordado; precisa aprovação.</div>
+  <div class="gi"><b>GUT</b> — criticidade do bug (Gravidade × Urgência × Tendência).</div>
+  <div class="gi"><b>UAT</b> — teste de aceite: você/cliente valida antes de ir pra produção.</div>
+  <div class="gi"><b>Backlog</b> — fila priorizada de tudo que ainda não foi feito.</div>
+  <div class="gi"><b>DM (Demand Manager)</b> — seu ponto único de contato com a fábrica.</div>
+  <div class="gi"><b>Go-live</b> — quando a entrega entra em produção, no ar para o cliente.</div>
+</div>
+
+<div class="note" style="margin-top:14px">Treinamento: este painel é a base da sessão de 30 min com GRT e gerentes sênior — mostra o fluxo, a cadência de comunicação e o glossário. Após a sessão, fica disponível como referência (link Power BI / SharePoint).</div>
+
+<div class="footer">Confidencial — SysMap Solutions · SysMap Fabric · Visão 2 — Demanda · Mai 2026</div>
+</body></html>
