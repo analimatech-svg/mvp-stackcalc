@@ -63,8 +63,8 @@ MVP de 3 automações bloqueantes antes do primeiro projeto; o resto fica como c
 
 | Ponto aberto original (Tabela 19) | Novo status |
 |-----------------------------------|-------------|
-| #9 — Campos do SharePoint por projeto | ✅ **Resolvido** — kit-governanca-jornadas-sharepoint-v1.0.docx §5 |
-| #10 — Spec dos dashboards Power BI | 🟡 **Parcial** — operacional no board-admin §2; jornadas no kit-gov §4. Falta: design visual do dashboard do cliente e do executivo da diretoria |
+| #9 — Campos do SharePoint por projeto | ✅ **Resolvido** — kit-governanca-jornadas-sharepoint-v1.0.docx seção 5 |
+| #10 — Spec dos dashboards Power BI | 🟡 **Parcial** — operacional no board-admin seção 2; jornadas no kit-gov seção 4. Falta: design visual do dashboard do cliente e do executivo da diretoria |
 
 ---
 
