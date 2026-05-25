@@ -6,20 +6,24 @@ Este backlog consolida o que **ficou decidido na v1.2** e o que **ainda precisa 
 
 ---
 
-## A. Decididos na v1.2 — sugestões a confirmar
+## A. Decisões — fechadas na v1.3 (Ana)
 
-Aplicados ao documento como proposta. Precisam de um "ok" do responsável para virarem definitivos.
+Decisões aplicadas à spec v1.3. Itens 🟡 Adiado ficam para uma próxima rodada.
 
-| ID | Decisão | Proposta aplicada na v1.2 | Confirmar com | Prioridade |
-|----|---------|---------------------------|---------------|------------|
-| D-01 | Tipo de board no Jira | Projeto **Scrum** (habilita sprints e `openSprints()` nos JQLs) | Nayara / Jira Admin | P1 |
-| D-02 | Project Key padrão | `SSG`+ID (ex: `SSG47709`); evolutivos `…E`, AMS `…A`, interno `FABINT…` | Nayara | P1 |
-| D-03 | Swimlanes do board | 4 fixas: Upstream / Downstream / Overhead / Bugs | Ana + Nayara | P1 |
-| D-04 | "Espaço" por cliente | **Project Category** no Jira (não existe "Espaço") | Nayara | P2 |
-| D-05 | Overhead padrão por tipo | Escopo fechado 10% · Evolutivos 15% · AMS 20% | Tech Lead | P2 |
-| D-06 | Throughput conta o quê | Apenas US em F3–F5 (downstream) | Tech Lead | P2 |
-| D-07 | Horas: custom vs nativo | Manter campos custom #4/#5; **desativar** Time Tracking/Story Points nativos | Tech Lead | P2 |
-| D-08 | Critério AMS board vs swimlane | ≥ 3 tickets AMS/semana → board próprio; senão swimlane | Ana + Nayara | P3 |
+| ID | Decisão | Definição (v1.3) | Status |
+|----|---------|------------------|--------|
+| D-01 | Tipo de board no Jira | Projeto **Scrum** — a sprint funciona como **container** de planejamento | ✅ Decidido |
+| D-02 | Project Key padrão | **SSG + 5 dígitos** do ID (ex: `SSG47709`) — sem sufixos | ✅ Decidido |
+| D-03 | Swimlanes do board | **2 swimlanes**: Upstream / Downstream · Overhead = tipo de item · Bugs = cards no Downstream | ✅ Decidido |
+| D-04 | Agrupamento por cliente | **Espaço por cliente** — instância não é Cloud, permite espaços individuais | ✅ Decidido |
+| D-05 | Overhead padrão | **10% fixo** por US | ✅ Decidido |
+| D-06 | Throughput conta o quê | Boas práticas: **Story + Bug** concluídos por período, **em todos** os projetos | ✅ Decidido |
+| D-07 | Campos: nativo vs criar | **Nativo primeiro** (estimativa, tempo, resolução, labels); criar só o que falta | ✅ Decidido |
+| D-08 | Critério AMS board vs swimlane | **Ver depois** — manter em itens abertos | 🟡 Adiado |
+| D-09 | Financeiro no Jira | Custo/receita/margem **NÃO** no Jira — só Power BI, unido pelo **SSG ID** (chave) | ✅ Decidido |
+| D-10 | Fase da Fábrica como campo | **Não criar** — a fase é a coluna/status do board | ✅ Decidido |
+| D-11 | Alertas | Configurar **alertas com SLA** no Jira (bug crítico 2h, etc.) | ✅ Decidido |
+| D-12 | Calculadora de estimativa | **Detalhar depois** (tabela de horas) | 🟡 Adiado |
 
 ---
 
@@ -29,8 +33,9 @@ Não dá para fechar sem uma reunião/levantamento. Cada um tem dono e o que fal
 
 | ID | Item | O que falta | Dono | Prioridade |
 |----|------|-------------|------|------------|
-| B-01 | Campos do SSG a espelhar no Jira | Levantar com a área SSG quais campos financeiros entram. **v1.2 já pré-propõe**: Custo previsto, Receita prevista, Baseline, Margem prevista, Data go-live, Tipo de contrato | Ana Lima + Área SSG | P1 |
-| B-02 | Validar tabela de horas da calculadora | Sessão com TL + Arquiteto revisando os **19 tipos** (5 marcados ⚠ Validar: Apex, LWC, Integração, + os 4 novos) | TL / Arquiteto | P1 |
+| B-01 | ~~Campos financeiros do SSG no Jira~~ | ✅ **Resolvido (v1.3)** — financeiro fica só no Power BI; no Jira só o SSG ID como chave de junção | — | — |
+| B-02 | Validar tabela de horas da calculadora | Sessão com TL + Arquiteto revisando os **19 tipos** — detalhar depois (D-12) | TL / Arquiteto | P2 |
+| B-06 | Pasta template por tipo de projeto | Criar template (escopo/evolutivo/AMS) já com **pastas + prompts + docs padrão** — base para fábrica tradicional e agêntica | Nayara + CoE | P1 |
 | B-03 | Viabilidade Sonar/SonarCloud para Apex | Confirmar com TI se há instância; custo ~USD 450/mês (SonarCloud) ou SonarQube Community grátis. **Contexto já no doc** | Tech Lead + TI | P2 |
 | B-04 | Integração SSG ↔ Jira | API do SSG disponível? Spec técnica ou SOP manual. Definir trigger de criação do projeto | Ana Lima + TI | P2 |
 | B-05 | Padrão de quebra de tasks | Definir com o squad a granularidade real além do "máx 8h" (mudança de contexto técnico, dependência de ambiente) | TL + Squad | P3 |
@@ -70,9 +75,12 @@ MVP de 3 automações bloqueantes antes do primeiro projeto; o resto fica como c
 
 ## Resumo de prioridades
 
-- **P1 (bloqueia o 1º projeto):** D-01, D-02, D-03, B-01, B-02, automações 1–3
-- **P2 (importante):** D-04, D-05, D-06, D-07, B-03, B-04, automação 4
-- **P3 (melhoria):** D-08, B-05
+- **Decidido (v1.3):** D-01..D-07, D-09, D-10, D-11 — aplicados na spec v1.3
+- **Adiado:** D-08 (AMS), D-12 (calculadora detalhada)
+- **P1 a executar:** B-06 (pasta template), automações 1–3, criar campos no Jira
+- **P2:** B-02 (calculadora), B-03 (Sonar), B-04 (integração SSG)
+
+> Nota: instância **não é Jira Cloud** — isso afeta a conexão do Power BI (board-admin assume conector Cloud/API pública). Revisar o método de conexão para Server/Data Center.
 
 ---
-*Referência: spec-jira-sysmap-fabric-v1.2.docx · Códigos PC/PA/M conforme revisão crítica da sessão.*
+*Referência: spec-jira-sysmap-fabric-v1.3.docx · Códigos PC/PA/M/D conforme revisões da sessão.*

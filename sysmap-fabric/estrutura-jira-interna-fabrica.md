@@ -171,6 +171,7 @@ Estrutura para *conduzir* a construção e a governança das fábricas. Não con
 - **US-TRAD-4** Como squad, quero DoR/DoD publicados no canal definido
 - **US-TRAD-5** Como DM, quero os templates de kickoff (fechado/evolutivo) em uso
 - **EN-TRAD-8** `[CONFIG]` Clonar template de pastas SharePoint por projeto
+- **EN-TRAD-10** `[DOC]` Pasta template por tipo de projeto (escopo/evolutivo/AMS) já com **pastas + prompts + docs padrão** — base reutilizável para a fábrica tradicional e a agêntica (P1)
 
 ### E-TRAD-6 · `[Tradicional] Power BI Operacional`
 - **US-TRAD-6** Como gestão, quero o Dashboard de Planejamento conectado ao Jira
@@ -182,7 +183,7 @@ Estrutura para *conduzir* a construção e a governança das fábricas. Não con
 ## PROGRAMA C — Fábrica Agêntica
 
 ### E-AGEN-1 · `[Agêntica] Decisões Fundadoras` ⚠ destrava todo o programa
-- **DEC-AGEN-1** `[DECISÃO]` Entrega **SF, custom (cloud-native) ou ambos**? — *Status: Em discussão*
+- **DEC-AGEN-1** `[DECISÃO]` Entrega SF/custom/ambos — ✅ **Decidido: foco Salesforce** (a stack atende SF e custom, mas a prioridade é SF)
 - **DEC-AGEN-2** `[DECISÃO]` "Engenheiro AI" = pessoa apoiada por IA **ou** agente autônomo?
 - **DEC-AGEN-3** `[DECISÃO]` Gates humanos inegociáveis (PR review + verificação antes de Done)
 - **DEC-AGEN-4** `[DECISÃO]` Reusar a governança da Tradicional (DoR/DoD, Jira v1.2) — sim/não

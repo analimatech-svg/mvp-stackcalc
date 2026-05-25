@@ -77,32 +77,32 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
 <body>
 
 <h1>SysMap Fabric — Status de Produção</h1>
-<div class="sub">Sessão de Mai/2026 · Atualizado em 25 Mai 2026 · Revisão item a item aplicada — Spec Jira v1.2 · Confidencial — SysMap Solutions</div>
+<div class="sub">Sessão de Mai/2026 · Atualizado em 25 Mai 2026 · Decisões aplicadas — Spec Jira v1.3 · Confidencial — SysMap Solutions</div>
 
 <!-- KPIs -->
 <div class="kpis">
-  <div class="kpi green"><div class="kpi-n">v1.2</div><div class="kpi-l">Spec Jira revisada</div></div>
+  <div class="kpi green"><div class="kpi-n">v1.3</div><div class="kpi-l">Spec Jira com decisões</div></div>
   <div class="kpi green"><div class="kpi-n">8</div><div class="kpi-l">Pontos críticos tratados</div></div>
   <div class="kpi blue"><div class="kpi-n">2</div><div class="kpi-l">Pontos reclassificados (resolvido/parcial)</div></div>
   <div class="kpi amber"><div class="kpi-n">9</div><div class="kpi-l">Decisões no backlog</div></div>
 </div>
 
-<!-- Revisão v1.2 -->
+<!-- Decisões v1.3 -->
 <div class="rev">
-  <div class="rev-title">Revisão item a item — correções aplicadas na Spec Jira v1.2</div>
+  <div class="rev-title">Decisões aplicadas na Spec Jira v1.3</div>
   <div class="rev-grid">
-    <div class="rev-i"><strong>PC-01</strong> Swimlanes unificadas em 4 (Upstream/Downstream/Overhead/Bugs)</div>
-    <div class="rev-i"><strong>PC-02</strong> "Espaço Jira" → Project Category por cliente</div>
-    <div class="rev-i"><strong>PC-03</strong> Padrão de Project Key definido (SSG+ID)</div>
-    <div class="rev-i"><strong>PC-04</strong> Nota Time Tracking nativo vs campos custom + Power BI</div>
-    <div class="rev-i"><strong>PC-05</strong> Projetos de cliente = tipo Scrum (habilita openSprints)</div>
-    <div class="rev-i"><strong>PC-06</strong> Calculadora +4 tipos: Experience Cloud, Agentforce, OmniScript, CPQ</div>
-    <div class="rev-i"><strong>PC-08</strong> Automação de alerta de bug crítico (GUT≥27)</div>
-    <div class="rev-i"><strong>PA-03</strong> Overhead por tipo: 10% / 15% / 20%</div>
-    <div class="rev-i"><strong>PA-04</strong> SonarCloud — contexto de custo adicionado</div>
-    <div class="rev-i"><strong>PA-09</strong> SharePoint marcado ✓ resolvido (kit-gov seção 5)</div>
-    <div class="rev-i"><strong>PA-10</strong> Power BI marcado 🟡 parcial (board-admin + kit-gov)</div>
-    <div class="rev-i"><strong>M-01→07</strong> Campos #2/#8/#21, gate de desvio, link de bug, JQL throughput</div>
+    <div class="rev-i"><strong>D-01</strong> Projeto Scrum — sprint como container de planejamento</div>
+    <div class="rev-i"><strong>D-02</strong> Project Key = SSG + 5 dígitos (ex: SSG47709)</div>
+    <div class="rev-i"><strong>D-03</strong> 2 swimlanes: Upstream / Downstream (Overhead = tipo; Bugs = cards)</div>
+    <div class="rev-i"><strong>D-04</strong> Espaço por cliente — instância não é Cloud</div>
+    <div class="rev-i"><strong>D-05</strong> Overhead 10% fixo por US</div>
+    <div class="rev-i"><strong>D-06</strong> Throughput: Story + Bug, todos os projetos (boas práticas)</div>
+    <div class="rev-i"><strong>D-07</strong> Campos nativos primeiro; criar só o que falta</div>
+    <div class="rev-i"><strong>D-09</strong> Financeiro (custo/receita/margem) só no Power BI — SSG ID é a chave</div>
+    <div class="rev-i"><strong>D-10</strong> "Fase da Fábrica" sai (é a coluna do board)</div>
+    <div class="rev-i"><strong>D-11</strong> Alertas com SLA no Jira (bug crítico 2h)</div>
+    <div class="rev-i"><strong>D-08/D-12</strong> AMS e calculadora detalhada — adiados</div>
+    <div class="rev-i"><strong>Agêntica</strong> Foco Salesforce (stack também atende custom)</div>
   </div>
 </div>
 
@@ -139,10 +139,10 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
     <div class="card-hd">
       <div class="dot dot-green"></div>
       <div class="card-title">Estrutura Jira</div>
-      <span class="badge b-green">v1.2 revisada</span>
+      <span class="badge b-green">v1.3</span>
     </div>
     <div class="card-body">
-      <div class="item"><span class="item-icon">📄</span><span class="item-text"><strong>spec-jira-sysmap-fabric-v1.2.docx</strong> — 21 campos, 4 swimlanes, quality gates, calculadora (19 tipos), padrão de escrita, JQLs</span></div>
+      <div class="item"><span class="item-icon">📄</span><span class="item-text"><strong>spec-jira-sysmap-fabric-v1.3.docx</strong> — campos (nativo+custom), 2 swimlanes, quality gates, calculadora, padrão de escrita, JQLs</span></div>
       <div class="item"><span class="item-icon">✅</span><span class="item-text">Projetos de cliente = tipo Scrum · Project Category por cliente · Project Key SSG+ID</span></div>
       <div class="item"><span class="item-icon">✅</span><span class="item-text">8 pontos críticos da revisão tratados + 7 correções menores (campos, gates, JQL)</span></div>
       <div class="item"><span class="item-icon">✅</span><span class="item-text">Calculadora ampliada: Experience Cloud, Agentforce, OmniScript, CPQ</span></div>
@@ -238,7 +238,7 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
     <div class="card-body">
       <div class="item"><span class="item-icon">✅</span><span class="item-text">Fluxo definido: oportunidade SSG → aprovação → projeto Jira (ID espelhado)</span></div>
       <div class="item"><span class="item-icon">✅</span><span class="item-text">Decisão: ID do SSG = identificador do projeto Jira (sem integração técnica inicial)</span></div>
-      <div class="item"><span class="item-icon">✅</span><span class="item-text">v1.2 já pré-propõe campos candidatos (custo, receita, baseline, margem)</span></div>
+      <div class="item"><span class="item-icon">✅</span><span class="item-text">v1.3: financeiro só no Power BI — no Jira só o SSG ID (chave)</span></div>
       <div class="item"><span class="item-icon">⏳</span><span class="item-text">Validar lista de campos com área SSG · spec técnica ou SOP manual</span></div>
       <div class="pend">Aguardando: levantamento dos campos do SSG com área responsável</div>
     </div>
@@ -252,7 +252,7 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
       <span class="badge b-amber">Aguardando TL</span>
     </div>
     <div class="card-body">
-      <div class="item"><span class="item-icon">✅</span><span class="item-text">Tabela por tipo de configuração SF — agora 19 tipos (4 novos na v1.2)</span></div>
+      <div class="item"><span class="item-icon">✅</span><span class="item-text">Tabela por tipo de configuração SF (19 tipos) — detalhar horas depois</span></div>
       <div class="item"><span class="item-icon">✅</span><span class="item-text">Fatores de ajuste (1.0× a 1.5×) · overhead por tipo 10/15/20%</span></div>
       <div class="item"><span class="item-icon">⏳</span><span class="item-text">Validação das horas por tipo com Tech Lead e Arquiteto SF</span></div>
       <div class="item"><span class="item-icon">⏳</span><span class="item-text">Confirmar % de overhead por tipo de projeto</span></div>
@@ -319,7 +319,7 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
     <div class="next-num">5</div>
     <div class="next-body">
       <div class="next-label">Levantar campos do SSG com área responsável</div>
-      <div class="next-sub">Validar os candidatos pré-propostos na v1.2 — desbloqueia a Frente SSG+Jira</div>
+      <div class="next-sub">Financeiro vai pro Power BI (D-09); definir integração SSG ↔ Jira</div>
     </div>
     <div class="next-who">Ana Lima · Semana 1</div>
   </div>
@@ -327,13 +327,13 @@ h1{font-size:20px;font-weight:700;color:#F8FAFC;margin-bottom:3px}
     <div class="next-num">6</div>
     <div class="next-body">
       <div class="next-label">Criar os 21 campos customizados no Jira + 3 automações MVP</div>
-      <div class="next-sub">Seguir spec v1.2 · automações: DoD em Done, PR em In QA, alerta bug crítico</div>
+      <div class="next-sub">Seguir spec v1.3 · automações com SLA: DoD em Done, PR em In QA, alerta bug crítico</div>
     </div>
     <div class="next-who">Nayara · Semana 1</div>
   </div>
 </div>
 
-<div class="footer">Confidencial — SysMap Solutions · SysMap Fabric · Status Mai 2026 · Revisão Spec Jira v1.2</div>
+<div class="footer">Confidencial — SysMap Solutions · SysMap Fabric · Status Mai 2026 · Spec Jira v1.3</div>
 
 </body>
 </html>
